@@ -1,3 +1,3 @@
 # Aprenda GO
 
-repo for learning golang.
+repo for practice golang.
