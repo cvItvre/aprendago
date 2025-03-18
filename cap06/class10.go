@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-var x interface{}
+// var x interface{}
+var x any
 
 func class10() {
 
