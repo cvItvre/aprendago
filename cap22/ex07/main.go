@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"sync"
-	"time"
 )
 
 func main() {
@@ -22,9 +21,9 @@ func releaseWorkers(numWorkers int, ch chan int) {
 	var wg sync.WaitGroup
 	wg.Add(numWorkers)
 
-	for range numWorkers {
+	for worker := range numWorkers {
 		go func() {
-			profile := time.Now().Nanosecond()
+			profile := worker
 			for range 10 {
 				ch <- profile
 			}
